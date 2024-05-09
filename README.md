@@ -64,7 +64,9 @@ on cte.yr= cost_table.yr
 
 ## Analysis Questions and Recommendations
 Comparing the dat from the two years that is the revenue, profit and the number of riders, it can be seen that there was an increase in these values as the average price was increased from 3.99$ to 4.99$. The number of riders increased by 64% despite the increse of price, i.e., 25% increase.
+
 <img width="402" alt="image" src="https://github.com/FaridahMut/Data-Analysis-Process-Using-SQL-PowerBI/assets/160776452/ff51eab9-b533-47db-bf58-3e1eb329fe22">
+
 Calculating the price elasticity brings 2.56, which means an increase in price by 2,5 reduces the demand by 2.56. However in our case the demand increased.
 
 #Recommendation
