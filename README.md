@@ -19,13 +19,33 @@ The questions that need to be addressed are;
 
 ### Create a database
 * First step is to create a databse and import the data from the threee tables: bike_share_yr_0, bike_share_yr_0, cost_table into it.
-* Append the bike data from 2021 and 2022 using a *UNION so I could work with it in one table. **NOTE:** **Union all**, puts all the data including duplicated values in the tables.
-* I then join the data in the the tables with the cost_table using a **left join** to join the years.
-* Select the columns that are relevant for the analysis
-* Add other calculations like revenue=riders*price, and profit=riders*price-COGS
   
 ### Develop SQL Queries
+Append the bike data from 2021 and 2022 using a *UNION so I could work with it in one table. **NOTE:** **Union all**, puts all the data including duplicated values in the tables.
+* I then join the data in the the tables with the cost_table using a **left join** to join the years.
+* Select the columns that are relevant for the analysis
+* Add other calculations like **revenue**=riders x price and **profit**=riders x price-COGS
+```SQL
+with cte as (
+SELECT *
+FROM bike_share_yr_0
+UNION
+SELECT *
+FROM bike_share_yr_1)
 
+SELECT 
+dteday,
+cte.yr,
+rider_type,
+riders,
+price, 
+COGS,
+riders*price AS revenue,
+riders*price - COGS as profit
+FROM cte
+left join cost_table
+on cte.yr= cost_table.yr
+```
 ### Connect PowerBI to DataBase
 
 ### Build a Dashboard in PowerBI
