@@ -43,7 +43,7 @@ riders,
 price, 
 COGS,
 riders*price AS revenue,
-riders*price - COGS as profit
+riders*price - COGS*riders as profit
 FROM cte
 left join cost_table
 on cte.yr= cost_table.yr
@@ -56,12 +56,28 @@ on cte.yr= cost_table.yr
 * I divided the dashboard into three sections with some cards
 * Added a table to **analysis the hourly revenue**
   * Transformed the hr to whole number and applier a filter to display values within working hours i.e, 0700hrs to 2100 hrs
-*A visualization of the sum of revenue vs Season using a bar chart.
-A combined chart to display the sum of revenue, riders per month.
-An a doughurt chart to display the sum of the rider types i., registered vs casual riders
+* A visualization of the sum of revenue vs Season using a bar chart.
+* A combined chart to display the sum of revenue, riders per month.
+* A doughurt chart to display the sum of the rider types i., registered vs casual riders
 
 <img width="589" alt="image" src="https://github.com/FaridahMut/Data-Analysis-Process-Using-SQL-PowerBI/assets/160776452/d02c31b9-06dc-4790-9b72-a37e96d281eb">
 
 ## Analysis Questions and Recommendations
+Comparing the dat from the two years that is the revenue, profit and the number of riders, it can be seen that there was an increase in these values as the average price was increased from 3.99$ to 4.99$. The number of riders increased by 64% despite the increse of price, i.e., 25% increase.
+<img width="402" alt="image" src="https://github.com/FaridahMut/Data-Analysis-Process-Using-SQL-PowerBI/assets/160776452/ff51eab9-b533-47db-bf58-3e1eb329fe22">
+Calculating the price elasticity brings 2.56, which means an increase in price by 2,5 reduces the demand by 2.56. However in our case the demand increased.
+
+#Recommendation
+1. Price Setting
+The company to do a conservative price increase between 10-15% to test the market response qithout risking a significant loss of customers.
+  1. First price option set at 10% i.e, 10% of $4.99 gives $5.49
+  2. Second price option set at 15% i.e., 15% of $4.99 gives $5.74
+2. A Startegy
+   * The company to **monitor and adjust**. Should be prepared to implement the new prices and ready to adjust them based on the customer feedback and the sales data.
+   * **Segment the prices**. The comapny can consider offering two prices for their customer types i.e., the casual and the registered riders
+   * **A market analysis**. To conduct a market analysis to understand their customers, know their satisfaction levels, potential competitors, where they can improve and the enconomic envornment.
+  
+
+
 
    
