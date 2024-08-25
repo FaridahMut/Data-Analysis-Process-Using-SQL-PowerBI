@@ -1,4 +1,4 @@
-# Data-Analysis of a Bike Share dataset
+# Revenue Analysis and New Pricing for a Bike Share Company
 
 ## Introduction
 The project aims to develop a Dashboard for T-Bike Share that displays the key performance metrics for informed decision-making.
